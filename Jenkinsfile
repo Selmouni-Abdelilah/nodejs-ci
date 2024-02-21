@@ -4,7 +4,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 // Checkout your source code from your version control system
-                git 'https://github.com/Selmouni-Abdelilah/nodejs-ci.git'
+                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'GitHubcredentials', url: 'https://github.com/Selmouni-Abdelilah/nodejs-ci.git']])
             }
         }
         stage('Install dependencies') {
