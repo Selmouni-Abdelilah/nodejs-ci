@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000; // Unnecessary now, but useful once we start running our server in the cloud later on, per https://learn.microsoft.com/en-us/azure/app-service/configure-language-nodejs?pivots=platform-linux#get-port-number
 
 app.get(["/", "/index.html"], (req, res) => {
-    res.send("Hello World!");
+    res.send("Hello CLOUD!");
 });
 
 if (process.env.NODE_ENV !== "test") {
