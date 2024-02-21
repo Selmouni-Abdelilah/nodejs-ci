@@ -20,10 +20,6 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Cleanup') {
-            steps {
-                // Clean up any artifacts or temporary files if necessary
-                sh 'npm clean'
             }
         }
     }
